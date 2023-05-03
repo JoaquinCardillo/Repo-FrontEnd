@@ -18,12 +18,51 @@
             </div>
         </div>
           <div class="container-right">
-            <h2>Get in contact with us!</h2>
+            <h2>Sell your vehicle with us!</h2>
+           <p>Select your car brand:</p>
             <form action="">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Nombre">
+                <label>
+                    <select id="dropdown">
+                      <option value="">(select one)</option>
+                      <option value="1">Ford</option>
+                      <option value="2">Chevrolet</option>
+                      <option value="3">Toyota</option>
+                      <option value="4">Honda</option>
+                      <option value="5">Jeep</option>
+                      <option value="6">Volkswagen</option>
+                      <option value="7">Citroen</option>
+                      <option value="8">Mercedes-Benz</option>
+                      <option value="9">Other</option>
+                      
+                    
+                    </select>
+                  </label> 
+
+                  <p>Enter the model of your car:</p>
+                  <input type="text" class="form-control" name="Car-model" id="Car-model" placeholder="Car-Model">
+
+                  <p>Enter the year of your car:</p>
+                  <input type="text" class="form-control" name="Car-year" id="Car-year" placeholder="Car-year">
+                
+                
+                <p>Enter the kilometres that your car have:</p>
+                <input type="text" class="form-control" name="car-km" id="car-km" placeholder="Kms">
+                
+               
+                    <p>Especify your car fuel:</p>
+                           <label ><input id="gas" type="radio" name="gas" value="gas"/>Gas</label>
+                           <label ><input id="diesel" type="radio" name="diesel" value="2" />Diesel</label> 
+                           <label ><input id="gnc" type="radio" name="gnc" value="3" />Gnc</label>
+                           <label ><input id="electric" type="radio" name="electric" value="4" />Electric</label>
+                  
                 <input type="text" class="form-control" name="email" id="email" placeholder="Email">
-                <textarea cols="30" rows="10" name="massage" id="message" placeholder="Mensaje"></textarea>
-                <button class="form-buttom" type="submit" id="submit">enviar</button>
+                <textarea cols="30" rows="10" name="description" id="description" placeholder="Description of your vehicle"></textarea>
+                <input  id="submit" type="submit" value="Submit" />
+
+                <div>
+                <label for="car-picture">Car Picture<input id="car-picture" type="file" name="file" /></label>
+                </div>
+                
 
                 <span class="error " id="error">Debe ingresar todos los campos obligatorios</span>
 
