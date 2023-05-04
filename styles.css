@@ -9,17 +9,15 @@ body{
 }
  
 .container-left{
-     width: 20%;
-     background-color:white;
-     padding: 1rem;
+     width: 5%;
+     background-color:#ffffff;
+     padding-left: 1rem;
 }
  
 .container-right{
     width: 100%;
-    background-color:antiquewhite;
+    background-color:#faebd7;
     padding: 1rem;
-    border-left-style:solid ;
-    border-left-color:black ;
     border: left width 2px;;
 }
 
@@ -30,7 +28,7 @@ body{
 .menu-item{
     display:block;
     margin-bottom:1rem;
-    background-color: aqua;
+    background-color: #00ffff;
     border: 1px solid ;
     text-align: center;
 }
@@ -74,7 +72,7 @@ body{
 
 
 .error{
-    color:red;
+    color:#ff0000;
     display: none;                      /*solo se muestra cuando se produce un error*/
 } 
 
