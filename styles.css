@@ -10,15 +10,15 @@ body{
  
 .container-left{
      width: 5%;
-     background-color:#ffffff;
+     background-color:white;
      padding-left: 1rem;
 }
  
 .container-right{
-    width: 100%;
-    background-color:#faebd7;
+    width: 140%;
+    background-color:#707B7C ;
     padding: 1rem;
-    border: left width 2px;;
+    border: right width 0px;;
 }
 
 .menu{
@@ -33,7 +33,7 @@ body{
     text-align: center;
 }
 
-.homero-img{
+.ferraris-img{
     width:80%;
     height:70%;
 }
