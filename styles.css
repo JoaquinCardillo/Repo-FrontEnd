@@ -11,7 +11,7 @@ body{
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 140vh;
 }
  
 .container-left{
