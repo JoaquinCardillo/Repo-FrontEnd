@@ -10,14 +10,16 @@ body{
 }
 
 .container {
-    display: flex;
+    display: contents;
     height: 140vh;
+    margin: 0%;
+    
 }
  
 .container-left{
-     width: 5%;
+     width: 0%;
      background-color:white;
-     padding-left: 1rem;
+     padding-left: 0px;
 }
  
 .container-right{
