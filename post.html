@@ -47,11 +47,21 @@
     <div  id="container" class="container" >
 
           <div class="container-right">
-            <h2>Sell your vehicle with us!</h2>
-           <p>Select your car brand:</p>
-            <form action="">
-                <label>
-                    <select id="dropdown">
+            <h2 calss="postTitle">Sell your vehicle with us!</h2>
+           
+            <form action="" class="postIt">
+              <div class="division-vehicle-type">
+              <h4>I would like to promote a:</h4>
+              <label for="car-type">Car</label>
+              <input type="radio" id="car-type" name="car-type">
+              <label for="bik-type">Motorcycle</label>
+              <input type="radio" id="bike-type" name="bike-type">
+              </div>
+              <br><br>
+              
+                <label for="dropdown-brand">
+                  <p>Select your vehicle's brand:</p>
+                    <select id="dropdown-brand" required>
                       <option value="">(select one)</option>
                       <option value="1">Ford</option>
                       <option value="2">Chevrolet</option>
@@ -67,15 +77,18 @@
                     </select>
                   </label> 
 
-                  <p>Enter the model of your car:</p>
-                  <input type="text" class="form-control" name="Car-model" id="Car-model" placeholder="Vehicle-Model">
+                  <p>Enter your vehicle's model:</p>
+                  <input type="text" class="form-control" name="Car-model" id="Car-model" placeholder="Vehicle-Model" required>
 
-                  <p>Enter the year of your car:</p>
-                  <input type="text" class="form-control" name="Car-year" id="Car-year" placeholder="Vehicle-year">
+                  <p>Enter the production date of your vehicle:</p>
+                  <input type="text" class="form-control" name="Car-year" id="Car-year" placeholder="Vehicle-year" required>
                 
                 
-                <p>Enter the kilometres that your car have:</p>
-                <input type="text" class="form-control" name="car-km" id="car-km" placeholder="Kms">
+                <p>Enter your vehicle's kms:</p>
+                <input type="text" class="form-control" name="car-km" id="car-km" placeholder="Kms" required>
+
+                <p>Provide an approximate price:</p>
+                <input type="text" class="form-control" name="car-price" id="car-price" placeholder="$" required>
                 
                
                     <p>Especify your car fuel:</p>
@@ -85,12 +98,17 @@
                            <label ><input id="electric" type="radio" name="electric" value="4" />Electric</label>
                   <p>Contact email:</p>
                 <input type="text" class="form-control" name="email" id="email" placeholder="Email">
-                <textarea cols="30" rows="10" name="description" id="description" placeholder="Description of your vehicle"></textarea>
+                
+                <p>Provide a description for your vehicle:</p>
+                <textarea cols="30" rows="6" name="description" id="description" placeholder="Write here" required></textarea>
+                
+                <div>
+                  <label for="car-picture">Car Picture<input id="car-picture" type="file" name="file" /></label>
+                </div>
+
                 <input  id="submit" type="submit" value="Submit" />
 
-                <div>
-                <label for="car-picture">Car Picture<input id="car-picture" type="file" name="file" /></label>
-                </div>
+                
                 
 
                 <span class="error " id="error">Debe ingresar todos los campos obligatorios</span>
