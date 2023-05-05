@@ -5,6 +5,10 @@ body{
     
 }
 
+.page-content{
+    display:flex
+}
+
 .container {
     display: contents;
     height: 140vh;
