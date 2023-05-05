@@ -1,24 +1,45 @@
-console.log("Hola mundo");
+let products=[];
 
-window.addEventListener('load',()=>{                                            //para que la pagina carge todo antes de que podamos interactuar
- const submitButton=document.querySelector('#submit'); 
-  submitButton.addEventListener('click',(event)=> {                             //detecta cuando se presiona el boton enviar
-    event.preventDefault();
-    const name= document.querySelector('#name').value;                          
-    const email= document.querySelector('#email').value;
-    const message= document.querySelector('#message').value;
+let total = 0;
 
+function add(product,price){
+  console.log(product,price);
+  products.push(product);
+  total=total+price
+  document.getElementById("checkout").innerHTML= `pagar $$(total)}`
 
-    if(name !== '' && email !=='' && message !=='') {
-        //ok
-        document.querySelector('#user-name').innerHTML=name;
-        document.querySelector('#user-email').innerHTML=email;
-        document.querySelector('#user-message').innerHTML=message;
+}
+
+function Pay(){
+  window.alert(products.join(",\n"));
+}
+
+//---------
+
+function displayProducts(productList) {
+  let productsHTML = '';
+  productList.forEach(element => {
+    productsHTML +=
+    `<div class="item-container">
+                <h3 id="car1">${element.brand}</h3>
+                <img src="${element.photo}"alt="acá iría la foto de un carro to cheto">
+                <h4 id="car-price1" style="color:goldenrod">${element.price}</h4>
+                <h4>Features</h4>
+                <p id="car-item1"><i>empty</i></p>
+                <button class="button-ask">Ask</button>
+              </div>`
     
-    }else{
-        //error
-        document.querySelector('#error').classList.add('show-error');
-    }
   });
+  document.getElementById('page-content').innerHTML= productsHTML;
 
-})
+
+}
+
+
+
+window.onload = async()=>{
+  const productList = await (await fetch("/api/products")).json();
+  
+  console.log(productList);
+  displayProducts(productList);
+}

@@ -43,8 +43,8 @@ const products =[
 
 
 },{    
-    id: 1,
-    brand: "brand-name",
+    id: 4, 
+    brand:"brand-name",
     price:50,
     model:"model-name",
     years:50,
@@ -56,7 +56,7 @@ const products =[
 
 
 },{    
-    id: 1,
+    id: 5,
     brand: "brand-name",
     price:50,
     model:"model-name",
@@ -71,10 +71,10 @@ const products =[
 
 
 app.get('/api/products', (req, res) => {
-  res.send(products)
-})
+  res.send(products);
+});
 
-app.use("/",express.static("fe"))
+app.use("/",express.static("fe"));
 
 
 app.listen(port, () => {
