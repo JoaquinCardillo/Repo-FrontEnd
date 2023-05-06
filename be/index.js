@@ -13,9 +13,6 @@ const products =[
     fuel:"gas",
     description:"car-description",
     photo:"assets/toyota_corolla.jpg",
-
-
-
 },{    
     id: 2,
     brand: "HONDA",
