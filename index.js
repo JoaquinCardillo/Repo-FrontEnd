@@ -5,66 +5,66 @@ const port = 3000
 const products =[
 {    
     id: 1,
-    brand: "brand-name",
-    price:50,
-    model:"model-name",
+    brand: "TOYOTA",
+    price:150000,
+    model:"COROLLA",
     years:50,
     kms:50,
-    fuel:"type-fuel",
+    fuel:"gas",
     description:"car-description",
-    photo:"photo/product-1.jpg",
+    photo:"assets/toyota_corolla.jpg",
 
 
 
 },{    
     id: 2,
-    brand: "brand-name",
-    price:50,
-    model:"model-name",
+    brand: "HONDA",
+    price:125000,
+    model:"CIVIC",
     years:50,
     kms:50,
-    fuel:"type-fuel",
+    fuel:"electric",
     description:"car-description",
-    photo:"photo/product-2.jpg",
+    photo:"assets/honda_civic.jpg",
 
 
 
 },{    
     id: 3,
-    brand: "brand-name",
-    price:50,
-    model:"model-name",
+    brand: "FORD",
+    price:75000,
+    model:"FIESTA",
     years:50,
     kms:50,
-    fuel:"type-fuel",
+    fuel:"diesel",
     description:"car-description",
-    photo:"photo/product-3.jpg",
+    photo:"assets/ford_fiesta.jpg",
 
 
 
 },{    
     id: 4, 
-    brand:"brand-name",
-    price:50,
-    model:"model-name",
+    brand:"CHEVROLET",
+    price:97000,
+    model:"CRUZE",
     years:50,
     kms:50,
-    fuel:"type-fuel",
+    fuel:"diesel",
     description:"car-description",
-    photo:"photo/product-4.jpg",
+    photo:"assets/honda_civic.jpg",
 
 
 
 },{    
     id: 5,
-    brand: "brand-name",
-    price:50,
-    model:"model-name",
+    brand: "CITROEN",
+    price:64000,
+    model:"C4",
     years:50,
     kms:50,
-    fuel:"type-fuel",
-    description:"car-description",
-    photo:"photo/product-5.jpg",
+    fuel:"gas",
+    description:"cc3_citroen.jpg",
+    photo:"assets/c3_citroen.jpg",
 
 }
 ]
