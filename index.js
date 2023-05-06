@@ -51,7 +51,7 @@ const products =[
     kms:50,
     fuel:"diesel",
     description:"car-description",
-    photo:"assets/honda_civic.jpg",
+    photo:"assets/chevrolet_cruce.jpeg",
 
 
 
