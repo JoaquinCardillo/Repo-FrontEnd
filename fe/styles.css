@@ -52,7 +52,7 @@ body{
         /*----------------------------*/
 
         /* Products attibutes */
-        .item-section{
+        #page-content{
             display: flex;
             flex-wrap: wrap;
             justify-content:space-evenly;
@@ -98,11 +98,21 @@ body{
 /* Bikes Page */
 /* Post Page */
 
+        h2.postTitle {
+            text-align: center; /*no funca y no sé por qué*/
+        }
+
+        form.postIt {
+            max-width: 70%;
+            max-height: 70%;
+            margin: 50px 50px 50px 200px; 
+        }
 
 
-.menu{
 
-}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
 
 .menu-item{
     display:block;
@@ -141,7 +151,7 @@ body{
  }
 
 .form-control{
-    display: block;
+    display: block; 
     margin: 2rem 0 ;
  }
 
