@@ -6,7 +6,7 @@ const {google} = require('googleapis');
 const { response } = require('express');
 
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
@@ -81,15 +81,15 @@ async function listMajors(auth) {
   const rows = res.data.values;
 
   const products = rows.map((row) => ({ 
-    id: row[0],
+    id: +row[0],
     brand: row[1],
-    price:row[2],
-    model:row[3],
-    years:row[4],
-    kms:row[5],
-    fuel:row[6],
-    description:row[6],
-    photo:row[7],
+    price: +row[2],
+    model: row[3],
+    years: +row[4],           //el + hace que lo leea como number
+    kms: +row[5],
+    fuel: row[6],
+    description: row[6],
+    photo: row[7],
 }));
 
 console.log(products);
@@ -109,6 +109,5 @@ console.log(products);
   });
 }
 */
-authorize().then(listMajors).catch(console.error);
-
+authorize().then(listMajors).catch(console.error); //<--esto ejecuta la función "READ"
 
