@@ -75,7 +75,7 @@ async function listMajors(auth) {
   const sheets = google.sheets({version: 'v4', auth});
   const res = await sheets.spreadsheets.values.get({
     spreadsheetId: '1HcvQj9dEcavmjp92LtbhVeXTwOZyQlTXhRvkEMhfO_Q',
-    range: 'stock!A2:I',
+    range: 'stock!A2:I'
   });
   
   const rows = res.data.values;
@@ -110,4 +110,3 @@ console.log(products);
 }
 */
 authorize().then(listMajors).catch(console.error); //<--esto ejecuta la función "READ"
-
