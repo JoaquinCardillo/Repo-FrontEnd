@@ -22,7 +22,6 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-
 //POST
 app.post('/send-message', async (req, res)=>{
 
@@ -56,4 +55,4 @@ console.log(rows);
     }
 });
 
-app.listen(5100, ()=> console.log('App running'));
+app.listen(5000, ()=> console.log('App running'));
