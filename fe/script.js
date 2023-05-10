@@ -1,24 +1,16 @@
-let products=[];
+let vehiculos=[];
 
 let total = 0;
-/*
-function add(product,price){
-  console.log(product,price);
-  products.push(product);
-  total=total+price
-  document.getElementById("checkout").innerHTML= `pagar $$(total)}`
-
-}*/
 
 function Pay(){
-  window.alert(products.join(",\n"));
+  window.alert(vehiculos.join(",\n"));
 }
 
 //---------
 
-function displayProducts(productList) {
+function displayVehiculos(vehiculostList) {
   let productsHTML = '';
-  productList.forEach(element => {
+  vehiculostList.forEach(element => {
     productsHTML +=
     `<div class="item-container">
                 <h3>${element.brand}</h3>
@@ -38,8 +30,8 @@ function displayProducts(productList) {
 
 
 window.onload = async()=>{
-  const productList = await (await fetch("/api/products")).json();
+  const vehiculostList = await (await fetch("/api/products")).json();
   
-  console.log(productList);
-  displayProducts(productList);
+  console.log(vehiculostList);
+  displayProducts(vehiculostList);
 }
