@@ -1,6 +1,7 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
+const repositorio = require("./repositorio");
 
 const products =[
 {    
@@ -70,7 +71,7 @@ const products =[
 ]
 
 
-app.get('/api/products', (req, res) => {
+app.get('/api/products',  (req, res) => {
   res.send(products);
 });
 

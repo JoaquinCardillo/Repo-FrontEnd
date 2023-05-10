@@ -3,7 +3,6 @@ const path = require('path');
 const process = require('process');
 const {authenticate} = require('@google-cloud/local-auth');
 const {google} = require('googleapis');
-const { response } = require('express');
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
@@ -71,44 +70,33 @@ async function authorize() {
  * @see https://docs.google.com/spreadsheets/d/1HcvQj9dEcavmjp92LtbhVeXTwOZyQlTXhRvkEMhfO_Q/edit#gid=0
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
-async function listMajors(auth) {
-  const sheets = google.sheets({version: 'v4', auth});
-  const res = await sheets.spreadsheets.values.get({
-    spreadsheetId: '1HcvQj9dEcavmjp92LtbhVeXTwOZyQlTXhRvkEMhfO_Q',
-    range: 'stock!A2:I',
-  });
+
+
+///////////////READ
+
+
+async function read(auth) {
+    const sheets = google.sheets({version: 'v4', auth});
+    const res = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1HcvQj9dEcavmjp92LtbhVeXTwOZyQlTXhRvkEMhfO_Q',
+      range: 'stock!A2:I'
+    });
+    
+    const rows = res.data.values;
   
-  const rows = res.data.values;
-
-  const products = rows.map((row) => ({ 
-    id: row[0],
-    brand: row[1],
-    price:row[2],
-    model:row[3],
-    years:row[4],
-    kms:row[5],
-    fuel:row[6],
-    description:row[6],
-    photo:row[7],
-}));
-
-console.log(products);
-}
-
- /*
-
-  if (!rows || rows.length === 0) {
-    console.log('No data found.');
-    return;
+    const products = rows.map((row) => ({ 
+      id: +row[0],
+      brand: row[1],
+      price: +row[2],
+      model: row[3],
+      years: +row[4],           //el + hace que lo leea como number
+      kms: +row[5],
+      fuel: row[6],
+      description: row[6],
+      photo: row[7],
+  }));
+  
+  console.log(products)
   }
-  
-  console.log('id, Brand, Price, Model, Years, Kms, Fuel, Description, photo:');
-  rows.forEach((row) => {
-    // Print columns A and E, which correspond to indices 0 and 4.
-    console.log(`${row[0]},${row[1]}, ${row[2]}, ${row[3]}, ${row[4]},${row[5]},${row[6]},${row[7]}, `);
-  });
-}
-*/
-authorize().then(listMajors).catch(console.error);
 
-
+authorize().then(read).catch(console.error);
