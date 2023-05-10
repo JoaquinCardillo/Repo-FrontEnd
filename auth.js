@@ -73,8 +73,6 @@ function handleAuthClick() {
         }
         document.getElementById('signout_button').style.visibility = 'visible';
         document.getElementById('authorize_button').innerText = 'Refresh';
-        await getVehiculos();
-        actualizarVehiculos();
     };
 
     if (gapi.client.getToken() === null) {
