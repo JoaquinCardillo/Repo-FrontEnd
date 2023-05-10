@@ -7,7 +7,7 @@ async function getVehiculos(){
     try {
         response = await gapi.client.sheets.spreadsheets.values.get({
             spreadsheetId: '1HcvQj9dEcavmjp92LtbhVeXTwOZyQlTXhRvkEMhfO_Q',
-            range: 'stock Data!A:K',
+            range: 'stock!A:K',
         });
     } catch (err) {
         console.error(err)
