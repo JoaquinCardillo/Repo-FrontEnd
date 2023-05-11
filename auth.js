@@ -1,4 +1,3 @@
-
 // TODO(developer): Set to client ID and API key from the Developer Console
 const CLIENT_ID = "170050169303-e9smdsoog014isjimud0qupb3777fdbi.apps.googleusercontent.com";
 const API_KEY = "AIzaSyBNtdjr4mV-umfBg0DWO_4xy_fbWKAga2A";
@@ -14,8 +13,9 @@ let tokenClient;
 let gapiInited = false;
 let gisInited = false;
 
-document.getElementById("gapi").addEventListener("load",gapiLoaded);
-document.getElementById("gis").addEventListener("load",gisLoaded);
+
+document.getElementById("gapi").addEventListener("load", gapiLoaded);
+document.getElementById("gis").addEventListener("load", gisLoaded);
 
 
 document.getElementById('authorize_button').style.visibility = 'hidden';
@@ -73,15 +73,13 @@ function handleAuthClick() {
         }
         document.getElementById('signout_button').style.visibility = 'visible';
         document.getElementById('authorize_button').innerText = 'Refresh';
-        await getVehiculos();
-        actualizarVehiculos();
     };
 
     if (gapi.client.getToken() === null) {
-       
+
         tokenClient.requestAccessToken({ prompt: 'consent' });
     } else {
-        
+
         tokenClient.requestAccessToken({ prompt: '' });
     }
 }
@@ -100,4 +98,3 @@ function handleSignoutClick() {
     }
 }
 
- 
