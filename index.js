@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-
+/*
 const vehiculos =[
 {    
     id: 1,
@@ -69,7 +69,7 @@ const vehiculos =[
 
 }
 ]
-
+*/
 
 app.get('/api/products', (req, res) => {
   res.send(vehiculos);
