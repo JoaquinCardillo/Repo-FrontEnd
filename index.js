@@ -18,7 +18,7 @@ app.use(express.static('./css'))
 
 app.get("/",function(req,res){
     /*res.send("Aplicacion todo va bien")*/
-    
+    conectar()
     todos = obtenerContactos()
     res.render('index',{titulo :'MotorSport', contactos:todos})
 })
