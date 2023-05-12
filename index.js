@@ -1,84 +1,31 @@
-const express = require('express')
-const app = express()
-const port = 3000
+import express from 'express' //importamos express
+import { agregarContacto, obtenerContactos } from './src/mysql_conector.js'
+let todos
 
-/*
-const vehiculos =[
-{    
-    id: 1,
-    brand: "TOYOTA",
-    price:150000,
-    model:"COROLLA",
-    years:50,
-    kms:50,
-    fuel:"gas",
-    description:"car-description",
-    photo:"assets/toyota_corolla.jpg",
+const app = express()//iniciamos express
 
-
-
-},{    
-    id: 2,
-    brand: "HONDA",
-    price:125000,
-    model:"CIVIC",
-    years:50,
-    kms:50,
-    fuel:"electric",
-    description:"car-description",
-    photo:"assets/honda_civic.jpg",
-
-
-
-},{    
-    id: 3,
-    brand: "FORD",
-    price:75000,
-    model:"FIESTA",
-    years:50,
-    kms:50,
-    fuel:"diesel",
-    description:"car-description",
-    photo:"assets/ford_fiesta.jpg",
-
-
-
-},{    
-    id: 4, 
-    brand:"CHEVROLET",
-    price:97000,
-    model:"CRUZE",
-    years:50,
-    kms:50,
-    fuel:"diesel",
-    description:"car-description",
-    photo:"assets/chevrolet_cruce.jpeg",
-
-
-
-},{    
-    id: 5,
-    brand: "CITROEN",
-    price:64000,
-    model:"C4",
-    years:50,
-    kms:50,
-    fuel:"gas",
-    description:"cc3_citroen.jpg",
-    photo:"assets/c3_citroen.jpg",
-
-}
-]
-*/
-
-app.get('/api/products', (req, res) => {
-  res.send(vehiculos);
-});
-
-app.use("/",express.static("fe"));
-
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen('3000',function(){
+        console.log("Aplicacion iniciada ")
 })
 
+
+app.set('views','./vistas')
+app.set('view engine','pug')
+
+app.use(express.static('./vistas'))
+app.use(express.static('./src'))
+app.use(express.static('./css'))
+
+app.get("/",function(req,res){
+    /*res.send("Aplicacion todo va bien")*/
+    todos = obtenerContactos()
+    res.render('index',{titulo :'aplicacion de contactos', contactos:todos})
+})
+app.get('/agregar/:nombre/:numero',function(req,res){
+    let nombre=req.params.nombre
+    let numero=req.params.numero
+    agregarContacto(numero,nombre)
+    res.redirect('/')
+
+    console.log(nombre, numero)
+})
