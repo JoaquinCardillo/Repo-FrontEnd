@@ -1,5 +1,5 @@
 import express from 'express' //importamos express
-import { agregarContacto, obtenerContactos } from './src/mysql_conector.js'
+import { agregarContacto, conectar, obtenerContactos } from './src/mysql_conector.js'
 let todos
 
 const app = express()//iniciamos express
@@ -18,6 +18,7 @@ app.use(express.static('./css'))
 
 app.get("/",function(req,res){
     /*res.send("Aplicacion todo va bien")*/
+    conectar()
     todos = obtenerContactos()
     res.render('index',{titulo :'aplicacion de contactos', contactos:todos})
 })

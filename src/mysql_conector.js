@@ -6,7 +6,7 @@ const conector = mysql.createConnection(
         host:"localhost",
         user:"Tomas",
         password:"1234",
-        database:"agenda_contanctos",        
+        database:"motorsport",        
     }
 )
  
@@ -18,7 +18,7 @@ const conectar = () => {
 }
 
 const agregarContacto = (numero, nombre) => {
-    const sql = `INSERT INTO persona (id_persona, numero, nombre) VALUES (null, '${numero}', '${nombre}')`;
+    const sql = `INSERT INTO stock (email, brand, model, kms, year, fuel, price, photo, description) VALUES (null, '${numero}', '${nombre}')`;
     conector.query(sql, function(err, result, filed){
         if(err) throw err
         console.log(result)
