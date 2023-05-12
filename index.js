@@ -25,7 +25,7 @@ app.get("/",function(req,res){
 })
 
 
-app.get('/agregar/:email/:brand/:model/:kms/:year/:fuel/:price/:description',function(req,res){
+app.get('/agregar/:email/:brand/:model/:kms/:year/:fuel/:price/:photo/:description',function(req,res){
      let email = req.params.email
      let brand = req.params.brand
      let model = req.params.model
@@ -33,8 +33,9 @@ app.get('/agregar/:email/:brand/:model/:kms/:year/:fuel/:price/:description',fun
      let year = req.params.year
      let fuel = req.params.fuel
      let price = req.params.price
+     let photo = req.params.photo
      let description = req.params.description
-     agregarVehiculo(email,brand,model,kms,year,fuel,price,description)
+     agregarVehiculo(email,brand,model,kms,year,fuel,price,photo,description)
     //  res.redirect('/')
 
  })
