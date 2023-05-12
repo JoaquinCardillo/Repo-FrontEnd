@@ -17,8 +17,8 @@ const conectar = () => {
     })
 }
 
-const agregarVehiculo = (email, brand, model, kms, year,fuel) => {
-    const sql = `INSERT INTO stock (id, email, brand, model, kms, year, fuel, price, photo, description) VALUES (null, '${email}', '${brand}', '${model}', '${kms}', '${year}', '${fuel}', '50', '50', '50')`;
+const agregarVehiculo = (email, brand, model, kms, year,fuel,price,photo,description) => {
+    const sql = `INSERT INTO stock (id, email, brand, model, kms, year, fuel, price, photo, description) VALUES (null, '${email}', '${brand}', '${model}', '${kms}', '${year}', '${fuel}', '${price}', '50', '${description}')`;
 conector.query(sql, function(err, result, filed){
         if(err) throw err
         console.log(result)

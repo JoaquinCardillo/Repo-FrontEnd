@@ -25,15 +25,16 @@ app.get("/",function(req,res){
 })
 
 
-app.get('/agregar/:email/:brand/:model/:kms/:year/:fuel',function(req,res){
+app.get('/agregar/:email/:brand/:model/:kms/:year/:fuel/:price/:description',function(req,res){
      let email = req.params.email
      let brand = req.params.brand
      let model = req.params.model
      let kms = req.params.kms
      let year = req.params.year
      let fuel = req.params.fuel
-     agregarVehiculo(email,brand,model,kms,year,fuel)
+     let price = req.params.price
+     let description = req.params.description
+     agregarVehiculo(email,brand,model,kms,year,fuel,price,description)
     //  res.redirect('/')
 
-     console.log(email, brand, model, kms, fuel)
  })
