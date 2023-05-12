@@ -18,8 +18,9 @@ app.use(express.static('./css'))
 
 app.get("/",function(req,res){
     /*res.send("Aplicacion todo va bien")*/
+    conectar()
     todos = obtenerContactos()
-    res.render('index',{titulo :'aplicacion de contactos', contactos:todos})
+    res.render('index',{titulo :'MotorSport', contactos:todos})
 })
 app.get('/agregar/:nombre/:numero',function(req,res){
     let nombre=req.params.nombre
