@@ -10,14 +10,17 @@ html
             input(type="email" id="email" name="email")
             br
             label(for="brand") Brand:
-            input(type="brand" id="brand" name="brand")
+            input(type="text" id="brand" name="brand")
             br
             label(for="model") Model:
             textarea(id="model" name="model")
             br
+            label(for="year") Year:
+            textarea(id="year" name="year")
+            br
             
             label(for="kms") Kms:
-            textarea(id="kms" name="kms")
+            input(type="number" id="kms" name="kms")
             br
             
             label(for="year") Year:
@@ -32,9 +35,9 @@ html
                  option(value="Electric") Electric
             br 
 
-            //- label(for="price") Price :
-            //- textarea(id="price" name="price")
-            //- br
+            label(for="price") Price :
+            textarea(id="price" name="price")
+            br
 
             //- label(for="photo") Photo :
             //- input(type="file" id="photo" name="photo" accept="image/jpeg" required)
