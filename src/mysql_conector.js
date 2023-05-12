@@ -17,9 +17,9 @@ const conectar = () => {
     })
 }
 
-const agregarContacto = (numero, nombre) => {
-    const sql = `INSERT INTO stock (email, brand, model, kms, year, fuel, price, photo, description) VALUES (null, '${numero}', '${nombre}')`;
-    conector.query(sql, function(err, result, filed){
+const agregarVehiculo = (email, brand, model, kms, year,fuel) => {
+    const sql = `INSERT INTO stock (id, email, brand, model, kms, year, fuel, price, photo, description) VALUES (null, '${email}', '${brand}', '${model}', '${kms}', '${year}', '${fuel}', '50', '50', '50')`;
+conector.query(sql, function(err, result, filed){
         if(err) throw err
         console.log(result)
     })
@@ -27,12 +27,13 @@ const agregarContacto = (numero, nombre) => {
 }
 
 
-const obtenerContactos =()=>{
-    const sql = 'SELECT * FROM persona'
+
+const obtenerVehiculos =()=>{
+    const sql = 'SELECT * FROM stock'
     conector.query(sql, function(err, result, filed){
         todos=result
     })
     return todos
 }
 
-export{conectar,agregarContacto,obtenerContactos}
+export{conectar,obtenerVehiculos,agregarVehiculo}

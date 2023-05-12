@@ -1,5 +1,5 @@
 import express from 'express' //importamos express
-import { agregarContacto, conectar, obtenerContactos } from './src/mysql_conector.js'
+import {agregarVehiculo, conectar, obtenerVehiculos } from './src/mysql_conector.js'
 let todos
 
 const app = express()//iniciamos express
@@ -18,15 +18,22 @@ app.use(express.static('./css'))
 
 app.get("/",function(req,res){
     /*res.send("Aplicacion todo va bien")*/
-    conectar()
-    todos = obtenerContactos()
+    
+   
+    todos = obtenerVehiculos()
     res.render('index',{titulo :'MotorSport', contactos:todos})
 })
-app.get('/agregar/:nombre/:numero',function(req,res){
-    let nombre=req.params.nombre
-    let numero=req.params.numero
-    agregarContacto(numero,nombre)
-    res.redirect('/')
 
-    console.log(nombre, numero)
-})
+
+app.get('/agregar/:email/:brand/:model/:kms/:year/:fuel',function(req,res){
+     let email = req.params.email
+     let brand = req.params.brand
+     let model = req.params.model
+     let kms = req.params.kms
+     let year = req.params.year
+     let fuel = req.params.fuel
+     agregarVehiculo(email,brand,model,kms,year,fuel)
+    //  res.redirect('/')
+
+     console.log(email, brand, model, kms, fuel)
+ })

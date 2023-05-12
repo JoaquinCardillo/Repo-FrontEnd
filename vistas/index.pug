@@ -15,35 +15,35 @@ html
             label(for="model") Model:
             textarea(id="model" name="model")
             br
-            label(for="year") Year:
-            textarea(id="year" name="year")
-            br
             
             label(for="kms") Kms:
             textarea(id="kms" name="kms")
             br
             
-            label(for="fuel") Fuel :
-            select(name="fuel")
-                option(value="Petrol") Petrol
-                option(value="Diesel") Diesel
-                option(value="Gas") Gas 
-                option(value="Electric") Electric
-            br 
-
-            label(for="price") Price :
-            textarea(id="price" name="price")
+            label(for="year") Year:
+            textarea(id="year" name="year")
             br
 
-            label(for="photo") Photo :
-            input(type="file" id="photo" name="photo" accept="image/jpeg" required)
-            br    
-
-            label(for="description") Description :
-            textarea(id="description" name="description")
+            label(for="fuel") Fuel :
+             select(name="fuel" id="fuel")
+                 option(value="Petrol") Petrol
+                 option(value="Diesel") Diesel
+                 option(value="Gas") Gas 
+                 option(value="Electric") Electric
             br 
 
+            //- label(for="price") Price :
+            //- textarea(id="price" name="price")
+            //- br
 
-            input(type="submit" value="Enviar")
+            //- label(for="photo") Photo :
+            //- input(type="file" id="photo" name="photo" accept="image/jpeg" required)
+            //- br    
+
+            //- label(for="description") Description :
+            //- textarea(id="description" name="description")
+            //- br 
+
+            button(id="btnAgregar") Agregar vehiculo 
 
     script(src="funciones.js")
