@@ -47,6 +47,8 @@ html
             textarea(id="description" name="description")
              
 
-            button(id="btnAgregar") Agregar vehiculo 
+            button(id="btnAgregar") Agregar vehiculo
+            each vehiculo in vehiculos  
+                p= `${vehiculo.brand} -- ${vehiculo.model}`
 
     script(src="funciones.js")

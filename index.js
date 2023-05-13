@@ -18,10 +18,8 @@ app.use(express.static('./css'))
 
 app.get("/",function(req,res){
     /*res.send("Aplicacion todo va bien")*/
-    
-   
     todos = obtenerVehiculos()
-    res.render('index',{titulo :'MotorSport', contactos:todos})
+    res.render('index',{titulo :'MotorSport', vehiculos:todos})
 })
 
 
