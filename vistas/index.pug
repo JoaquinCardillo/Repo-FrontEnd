@@ -39,37 +39,42 @@ html(lang="en")
             input(type="text" id="brand" name="brand")
             br
             label(for="model") Model:
-            input(type="text" id="model" name="model")
+            textarea(id="model" name="model")
             br
             label(for="year") Year:
-            input(type="number" id="year" name="year")
+            textarea(id="year" name="year")
             br
             
             label(for="kms") Kms:
             input(type="number" id="kms" name="kms")
             br
             
-            label(for="fuel") Fuel :
-            select(name="fuel")
-                option(value="Petrol") Petrol
-                option(value="Diesel") Diesel
-                option(value="Gas") Gas 
-                option(value="Electric") Electric
-            br 
-
-            label(for="price") Price (USD):
-            input(type="number" id="price" name="price")
+            label(for="year") Year:
+            textarea(id="year" name="year")
             br
 
-            label(for="photo") Photo :
-            input(type="file" id="photo" name="photo" accept="image/jpeg" required)
-            br    
+            label(for="fuel") Fuel :
+             select(name="fuel" id="fuel")
+                 option(value="Petrol") Petrol
+                 option(value="Diesel") Diesel
+                 option(value="Gas") Gas 
+                 option(value="Electric") Electric
+            br 
+
+            label(for="price") Price :
+            textarea(id="price" name="price")
+            br
+
+            label(for="photo") Describa la foto :
+            textarea(id="photo" name="photo")
+             
 
             label(for="description") Description :
             textarea(id="description" name="description")
-            br 
+             
 
-
-            input(type="submit" value="Enviar")
+            button(id="btnAgregar") Agregar vehiculo
+            each vehiculo in vehiculos  
+                p= `${vehiculo.brand} -- ${vehiculo.model}`
 
     script(src="funciones.js")
