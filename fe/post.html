@@ -17,39 +17,39 @@
 </head>
 
 <body>
-  <header class="main-header">
+   <!-- Navigation Bar -->
+   <header class="main-header">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <b>MotorSports</b>
-        </a>
+        <a class="navbar-brand" href="index.html"><b>MotorSports</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="navbarNavDropdown" class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html" aria-current="page"
+              <a class="nav-link active" aria-current="page" href="index.html"
                 style="color:#ffffff;font: size 110%;">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">Cataloge</a>
+                aria-expanded="false">
+                Cataloge
+              </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="cars.html">Cars</a></li>
                 <li><a class="dropdown-item" href="motorBike.html">Motorcycles</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="publish.pug">Promote your vehicle</a>
+              <a class="nav-link" href="post.html">Promote your vehicle</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-
   <div class="container">
     <form action="/submit" method="post">
       <label for="email">Email :</label>
@@ -75,7 +75,7 @@
         <option value="Electric">Electric</option>
       </select>
       <br>
-      label for="price">Price:</label>
+      <label for="price">Price:</label>
       <textarea id="price" name="price"></textarea>
       <br>
 
