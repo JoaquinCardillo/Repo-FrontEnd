@@ -24,7 +24,7 @@ conector.query(sql, function(err, result, filed){
         console.log(result)
     })
 
-}
+} 
 
 
 
