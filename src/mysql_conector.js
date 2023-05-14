@@ -4,8 +4,8 @@ let todos
 const conector = mysql.createConnection(
     {
         host:"localhost",
-        user:"Tomas",
-        password:"1234",
+        user:"root",
+        password:"",
         database:"motorsport",        
     }
 )

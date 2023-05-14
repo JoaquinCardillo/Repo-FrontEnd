@@ -16,3 +16,18 @@ btnAgregar.addEventListener('click',function(){
 
 })
 
+{/* <script>
+    var vehiculos = [
+        { brand: "Marca1", model: "Modelo1" },
+        { brand: "Marca2", model: "Modelo2" },
+        { brand: "Marca3", model: "Modelo3" }
+    ];
+
+    vehiculos.forEach(function (vehiculo) {
+        var p = document.createElement("p");
+        p.textContent = vehiculo.brand + " -- " + vehiculo.model;
+        document.body.appendChild(p);
+    });
+</script>
+
+<script src="funciones.js"></script> */}
