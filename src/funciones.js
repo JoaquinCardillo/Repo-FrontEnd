@@ -12,8 +12,8 @@ const description= document.querySelector("#description")
 const btnAgregar= document.querySelector("#btnAgregar")
 
 btnAgregar.addEventListener('click',function(){
-    window.location.href = `agregar/${email.value}/${brand.value}/${model.value}/${kms.value}/${year.value}/${fuel.value}/${price.value}/${photo.value}/${description.value}`
-
+    window.location.href = `agregar/${email.value}/${brand.value}/${model.value}/${kms.value}/${year.value}/${fuel.value}/${price.value}/${photo.value}/${description.value}`;
+    window.location.reload();
 })
 
 {/* <script>
