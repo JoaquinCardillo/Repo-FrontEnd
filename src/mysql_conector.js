@@ -27,8 +27,7 @@ conector.query(sql, function(err, result, filed){
 } 
 
 
-
-export const obtenerVehiculos =()=>{
+const obtenerVehiculos =()=>{
     const sql = 'SELECT * FROM stock'
     conector.query(sql, function(err, result, filed){
         todos=result
