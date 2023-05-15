@@ -276,3 +276,8 @@ form {
   input[type="submit"]:hover {
     background-color: #45a049;
   }
+
+#car-type, #motorbike-type, .radio-buttons label {
+  display: inline;
+  margin-right: 10px;
+}
