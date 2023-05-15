@@ -69,41 +69,40 @@ const autos =[
 const motos = [{
     id: 500,
     email: "abc@outlook.com.ar",
-    brand: "Toyota",
-    model: "RS-500",
+    brand: "Honda",
+    model: "Tornado",
     kms: 300000,
     year: 2015,
     price: 5999,
     fuel: "petrol",
-    photo:"fe\assets\moto.jpg",
+    photo:"assets/honda_tornado.jpg",
     description:"Es una moto muy rendidora."
   },
   {
     id: 501,
     email: "abc@outlook.com.ar",
-    brand: "Toyota",
-    model: "RS-501",
+    brand: "Yamaha",
+    model: "Fz-250",
     kms: 40000,
     year: 2017,
     price: 11999,
     fuel: "electric",
-    photo:"fe\assets\moto1.jpg",
+    photo:"assets/yamaha-fz.jpg",
     description:"Es una moto muy ecológica."
   }];
 
 
+  app.get('/api/autoProducto', (req, res) => {
+    res.send(autos);
+  });
 
 
 
-
-
-app.get('/api/products', (req, res) => {
+app.get('/api/motoProducto', (req, res) => {
   res.send(motos);
 });
 
-app.get('/api/products', (req, res) => {
-    res.send(autos);
-});
+
 
 app.use("/",express.static("fe"));
 

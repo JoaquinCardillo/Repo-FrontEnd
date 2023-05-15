@@ -52,7 +52,7 @@ body{
         /*----------------------------*/
 
         /* Products attibutes */
-        #page-content{
+        #page-content-cars, #page-content-bikes {
             display: flex;
             flex-wrap: wrap;
             justify-content:space-evenly;
