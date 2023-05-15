@@ -7,6 +7,7 @@ const autos = [
     {
         id: 1,
         type:'car',
+        email: "abc@outlook.com.ar",
         brand: "TOYOTA",
         price: 150000,
         model: "COROLLA",
@@ -18,6 +19,7 @@ const autos = [
     }, {
         id: 2,
         type:'car',
+        email: "abc@outlook.com.ar",
         brand: "HONDA",
         price: 125000,
         model: "CIVIC",
@@ -32,6 +34,7 @@ const autos = [
     }, {
         id: 3,
         type:'car',
+        email: "abc@outlook.com.ar",
         brand: "FORD",
         price: 75000,
         model: "FIESTA",
@@ -47,6 +50,7 @@ const autos = [
         id: 4,
         type:'car',
         brand: "CHEVROLET",
+        email: "abc@outlook.com.ar",
         price: 97000,
         model: "CRUZE",
         years: 50,
@@ -60,6 +64,7 @@ const autos = [
     }, {
         id: 5,
         type:'car',
+        email: "abc@outlook.com.ar",
         brand: "CITROEN",
         price: 64000,
         model: "C4",
