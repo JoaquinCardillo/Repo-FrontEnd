@@ -1,6 +1,6 @@
 import mysql from "mysql"
 let autos;
-let motorbikes;
+let motos;
 
 const conector = mysql.createConnection(
     {
@@ -40,9 +40,9 @@ export const obtenerAutos =()=>{
 export const obtenerMotos =()=>{
     const sql = 'SELECT * FROM stock WHERE type=motorbike '
     conector.query(sql, function(err, result, filed){
-        motorbikes=result
+        motos=result
     })
-    return motorbikes
+    return motos
 }
 
 export{conectar,agregarVehiculo}
