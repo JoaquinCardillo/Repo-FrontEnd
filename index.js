@@ -72,7 +72,7 @@ const autos = [
     }
 ]
 
-export const motos = [{
+ const motos = [{
     id: 500,
     type:'motorbike',
     email: "abc@outlook.com.ar",
