@@ -8,7 +8,8 @@ function displayBikes(bikeList) {
           <h4>${element.model}</h4>
           <img src="${element.photo}" alt="Vehicle Photo">
           <h4 id="car-price1" style="color:goldenrod">${element.price} u$d</h4>
-          <p><i>${element.fuel}<br>${element.kms} kms</i><br>${element.year}</p>
+          <h4>${element.model}</h4>
+          <p><i>${element.fuel}<br>${element.kms} kms</i></p>
           <button class="button-ask">Ask</button>
         </div>
       `;
@@ -27,4 +28,3 @@ function displayBikes(bikeList) {
       console.error(error);
     }
   };
-  

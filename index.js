@@ -72,7 +72,7 @@ const autos = [
     }
 ]
 
-const motos = [{
+export const motos = [{
     id: 500,
     type:'motorbike',
     email: "abc@outlook.com.ar",
@@ -87,7 +87,6 @@ const motos = [{
 },
 {
     id: 501,
-    type:'motorbike',
     email: "abc@outlook.com.ar",
     brand: "Yamaha",
     model: "Fz-250",
@@ -142,4 +141,4 @@ app.get('/agregar/:type/:email/:brand/:model/:kms/:year/:fuel/:price/:photo/:des
      agregarVehiculo(email,type,brand,model,kms,year,fuel,price,photo,description)
     //  res.redirect('/')
 
- })
+ });
