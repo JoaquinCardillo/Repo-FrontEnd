@@ -2,7 +2,7 @@
 body{
     margin:0;
     padding:0;
-    
+    background-color:#dfebec;        
 }
 
 .container {
@@ -20,10 +20,61 @@ body{
  
 .container-right{
     width: 100%;
-    background-color:#dfebec;
     padding: 1rem;
     border: right width 0px;
+    text-align: center;
+    box-sizing: border-box;
+    position:relative;
 }
+
+.home-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px
+  }
+
+  table {
+    margin: auto; /* Centrar la tabla en la pantalla */
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 40px 70px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align:top;
+  }
+
+  th {
+    background-color: #ccc;
+  }
+
+  #info-personal, #experiencia {
+    margin:15px;
+    padding:2px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.342);
+    transition: 0.5s;
+    border-radius: 10px;
+  }
+
 
         /* nav bar */
         .container-fluid {
@@ -122,9 +173,10 @@ body{
     text-align: center;
 }
 
-.ferraris-img{
+.home-img{
     width:80%;
     height:70%;
+    align-items: center;
 }
 
 /* Bio */
