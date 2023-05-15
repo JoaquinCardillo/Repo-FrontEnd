@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const products =[
+const autos =[
 {    
     id: 1,
     brand: "TOYOTA",
@@ -66,9 +66,43 @@ const products =[
 }
 ]
 
+const motos = [{
+    id: 500,
+    email: "abc@outlook.com.ar",
+    brand: "Toyota",
+    model: "RS-500",
+    kms: 300000,
+    year: 2015,
+    price: 5999,
+    fuel: "petrol",
+    photo:"fe\assets\moto.jpg",
+    description:"Es una moto muy rendidora."
+  },
+  {
+    id: 501,
+    email: "abc@outlook.com.ar",
+    brand: "Toyota",
+    model: "RS-501",
+    kms: 40000,
+    year: 2017,
+    price: 11999,
+    fuel: "electric",
+    photo:"fe\assets\moto1.jpg",
+    description:"Es una moto muy ecológica."
+  }];
+
+
+
+
+
+
 
 app.get('/api/products', (req, res) => {
-  res.send(products);
+  res.send(motos);
+});
+
+app.get('/api/products', (req, res) => {
+    res.send(autos);
 });
 
 app.use("/",express.static("fe"));
