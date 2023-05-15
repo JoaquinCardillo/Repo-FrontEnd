@@ -140,4 +140,4 @@ app.get('/agregar/:email/:brand/:model/:kms/:year/:fuel/:price/:photo/:descripti
      agregarVehiculo(email,brand,model,kms,year,fuel,price,photo,description)
     //  res.redirect('/')
 
- })
+ });
