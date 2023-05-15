@@ -17,8 +17,8 @@
 </head>
 
 <body>
-   <!-- Navigation Bar -->
-   <header class="main-header">
+  <!-- Navigation Bar -->
+  <header class="main-header">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><b>MotorSports</b></a>
@@ -55,6 +55,12 @@
       <label for="email">Email :</label>
       <input type="email" id="email" name="email">
       <br>
+      <label for="email">Select what kind of vehicle are you pusblishing :</label>
+      <input type="radio" name="vehicle" value="car">
+      Car
+      <input type="radio" name="vehicle" value="motorbike">
+      MotorBike
+      <br>
       <label for="brand">Brand:</label>
       <input type="text" id="brand" name="brand">
       <br>
@@ -79,8 +85,8 @@
       <textarea id="price" name="price"></textarea>
       <br>
 
-      <label for="photo">Describa la foto:</label>
-      <textarea id="photo" name="photo"></textarea>
+      <label for="foto">Selecciona una foto:</label>
+      <input type="file" name="foto" id="foto">
       <br>
 
       <label for="description">Description:</label>
@@ -91,6 +97,7 @@
 
       <script src="funciones.js"></script>
 
-      </form>
-    </body>
+    </form>
+</body>
+
 </html>
