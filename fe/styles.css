@@ -67,16 +67,17 @@ body{
     background-color: #ccc;
   }
 
-  #info-personal, #experiencia {
-    background-color: #00ffff;
-    
-  } 
-
+  #info-personal {
+    margin:20px;
+    padding:10px 25px;
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
   .trabajo {
     margin:15px;
     padding:2px 16px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.342);
-    transition: 0.5s;
     border-radius: 10px;
   }
 
