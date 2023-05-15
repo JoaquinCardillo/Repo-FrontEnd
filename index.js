@@ -66,7 +66,7 @@ const autos =[
 }
 ]
 
-const motos = [{
+export const motos = [{
     id: 500,
     email: "abc@outlook.com.ar",
     brand: "Honda",
@@ -80,7 +80,19 @@ const motos = [{
   },
   {
     id: 501,
-    email: "abc@outlook.com.ar",
+    email: "mail@hotmail.com",
+    brand: "Yamaha",
+    model: "Fz-250",
+    kms: 40000,
+    year: 2017,
+    price: 11999,
+    fuel: "electric",
+    photo:"assets/yamaha-fz.jpg",
+    description:"Es una moto muy ecológica."
+  },
+  {
+    id: 502,
+    email: "hhh@gmail.com",
     brand: "Yamaha",
     model: "Fz-250",
     kms: 40000,
