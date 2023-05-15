@@ -67,7 +67,7 @@ body{
     background-color: #ccc;
   }
 
-  #info-personal {
+  .info-personal {
     margin:20px;
     padding:10px 25px;
     background-color: #ccc;
@@ -77,7 +77,13 @@ body{
   .trabajo {
     margin:15px;
     padding:2px 16px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.342);
+    box-shadow: 0 4px 8px 0 #7e62cc98;
+    border-radius: 10px;
+  }
+.escuela {
+    margin:15px;
+    padding:2px 16px;
+    box-shadow: 0 4px 8px 0 #6fb31698;
     border-radius: 10px;
   }
 
