@@ -1,5 +1,5 @@
 import express from 'express' //importamos express
-import {agregarVehiculo, conectar, obtenerVehiculos } from './src/mysql_conector.js'
+import {agregarVehiculo, conectar, obtenerAutos,obtenerMotos } from './src/mysql_conector.js'
 let todos
 
 const app = express()//iniciamos express
