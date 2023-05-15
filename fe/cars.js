@@ -8,6 +8,7 @@ function displayCars(carList) {
       <h4>${element.model}</h4>
       <img src="${element.photo}" alt="Vehicle Photo">
       <h4 id="car-price1" style="color:goldenrod">${element.price} u$d</h4>
+      <h4>${element.model}</h4>
       <p><i>${element.fuel}<br>${element.kms} kms <br> It's a ${element.year} model</i></p>
       <a href="mailto:${element.email}"><button class="button-ask">Ask</button></a>
     </div>
